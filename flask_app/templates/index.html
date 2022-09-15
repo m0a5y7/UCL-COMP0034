@@ -1,0 +1,9 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <h1>{{ title }}</h1>
+    <p>This is the home page.</p>
+    <h2>Business news for you: </h2>
+    {% for article in news['articles'] %}
+        <p><a href="{{ article.url|e }}">{{ article.title|e }}</a></p>
+    {% endfor %}
+{% endblock %}

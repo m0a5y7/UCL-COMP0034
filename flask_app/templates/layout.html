@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.css">
+    <script src="../static/js/bootstrap.bundle.js" defer></script>
+    <title>{{title}}</title>
+</head>
+<body>
+<header>
+    {% include 'navbar.html' %}
+</header>
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <ul>
+        {% for message in messages %}
+            <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+{% endwith %}
+<main>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+</main>
+</body>
+</html>

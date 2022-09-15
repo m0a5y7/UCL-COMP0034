@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+{% from "_formhelpers.html" import render_field %}
+{% block title %}Home{% endblock %} {% block content
+%}
+<h1 ="center">{% block header %}Posts{% endblock %}</h1>
+<div id="posts">
+  {% for post in posts %}
+  <div class="card border-dark">
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title"> Author: {{post.author}}</h5>
+            <p class="card-body"> Post: {{post.body}}</p>
+        </div>
+    </div>
+        {% if user.first_name == post.author %}
+        <div class="btn-group">
+          <button
+            type="button"
+            class="btn btn-sm btn-primary dropdown-toggle"
+            data-bs-toggle="dropdown"
+          ></button>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="/delete_post/{{post.id}}" class="dropdown-item"
+                >Delete</a
+              >
+            </li>
+          </ul>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    <div class="card-footer text-muted">{{post.publish_date}}</div>
+  </div>
+  {% endfor %}
+</div>
+{% block footer %}
+<div ="center">
+  <a href="/create_post"
+    ><button type="button" class="btn btn-primary btn-lg">
+      Create a Post
+    </button></a
+  >
+</div>
+{% endblock %} {% endblock %}

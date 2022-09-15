@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+{% set title = 'Profile Display' %}
+{% from "_formhelpers.html" import render_field %}
+{% block content %}
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">Username: {{ profile.username }}</h5>
+            <p class="card-text">Bio: {{ profile.bio }}</p>
+            {% if profile.photo is string %}
+            <img class="card-img" src="{{ url_for('static', filename='img/' + profile.photo)}}" alt="Profile Picture">
+            {% else %}
+            <p class="card-text">No Profile Picture</p>
+            {% endif %}
+        </div>
+    </div>
+    <a href="{{ url_for('main.update_profile') }}">
+        <button type="submit" class="btn btn-secondary">Edit Profile</button>
+    </a>
+
+{% endblock %}
