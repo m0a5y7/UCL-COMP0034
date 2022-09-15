@@ -1,7 +1,7 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-f059dc9a6f8d3a56e377f745f24479a46679e63a5d9fe6f495e02850cd0d8118.svg)](https://classroom.github.com/online_ide?assignment_repo_id=6693690&assignment_repo_type=AssignmentRepo)
 # COMP0034 Coursework 1 and 2 repository
 
-Summary: This is the repository for Courseworks 1 and 2 on the UCL course Application Programming for Data Science. Coursework 1 involved creating a simple web application that displays data visualisations from a cleaned and prepared dataset. Coursework 2 involved improving the web application structure for usability and style, by introducing software development structures. The main 'additional' functionalities chosen in this project are blogs and profiles. Extra functionalities include a Google API news summary.
+Summary: This is the repository for Courseworks 1 and 2 on the UCL course Application Programming for Data Science. This course was preceded by COMP0035 (see repository). Note that the dataset used in this course has been changed from the dataset in COMP0035. Coursework 1 involved creating a simple web application that displays data visualisations from a cleaned and prepared dataset. Coursework 2 involved improving the web application structure for usability and style, by introducing software development structures. The main 'additional' functionalities chosen in this project are blogs and profiles. Extra functionalities include a Google API news summary.
 
 # COMP0034 Coursework 2
 
